@@ -1,18 +1,18 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Myprofile from './components/MyProfile';
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
       <div className="wrapper">
-        <Routes>
-          <Route path="/myprofile" element={<Myprofile />} />
-        </Routes>
+        <Switch>
+          <Route path="/myprofile" component={<Myprofile />} />
+        </Switch>
       </div>
-    </>
+    </Router>
   );
 }
 
