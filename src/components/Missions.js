@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers } from '../redux/actiondataget';
 
@@ -24,21 +24,34 @@ const Missions = () => {
   }
 
   return (
-    <div className="getTable">
-      <div className="desiTable">
-        <h3>Misssion</h3>
-        <h3>Description</h3>
-        <h3>Status</h3>
-      </div>
-      <ul>
-        {users.map((user) => (
-          <div key={user.mission_id}>
-            <p>{user.mission_name}</p>
-            <p>{user.description}</p>
-          </div>
-        ))}
-      </ul>
-    </div>
+    <table className="missionTable">
+      <thead>
+        <tr>
+          <th>Mission</th>
+          <th>Description</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {users.length > 0 ? (
+          users.map((user) => (
+            <tr key={user.id}>
+              {' '}
+              <td>{user.mission_name}</td>
+              {' '}
+              <td>{user.description}</td>
+              {' '}
+              <td>{user.reserved}</td>
+              {' '}
+            </tr>
+          ))
+        ) : (
+          <tr>
+            <td colSpan="3">Loading</td>
+          </tr>
+        )}
+      </tbody>
+    </table>
   );
 };
 
