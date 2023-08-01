@@ -1,4 +1,4 @@
-import { Link, useMatch, useResolvedPath } from 'react-router-dom';
+import { NavLink, useMatch, useResolvedPath } from 'react-router-dom';
 import logo from '../asset/planet.png';
 
 export default function Navbar() {
@@ -23,7 +23,7 @@ function CusomeLink({ to, children }) {
 
   return (
     <li className={isActive ? 'active' : ''}>
-      <Link to={to}>{children}</Link>
+      <NavLink to={to}>{children}</NavLink>
     </li>
   );
 }
