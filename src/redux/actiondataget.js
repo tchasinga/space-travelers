@@ -25,7 +25,7 @@ export const fetchUserFailure = (error) => ({
 export const fetchUsers = () => (dispatch) => {
   dispatch(fetchUserRequest());
   axios
-    .get('https://jsonplaceholder.typicode.com/users')
+    .get('https://api.spacexdata.com/v3/missions')
     .then((response) => {
       const users = response.data;
       dispatch(fetchUserSuccess(users));
