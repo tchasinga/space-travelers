@@ -1,11 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
-  background-color: rgb(237, 231, 224);
   margin: 0;
   padding: 0;
 }
@@ -136,3 +135,48 @@ td {
   border: 0.1px solid rgb(207, 191, 191);
   font-size: 16px;
 }
+
+/* styling for Rocket Section  */
+.rocket-parent {
+  margin: 2rem 5% 2rem 5%;
+}
+
+.rocket-card {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.rocketImg {
+  width: 20%;
+  height: auto;
+  margin-right: 2%;
+}
+
+.desc-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.desc-section h3 {
+  text-align: left;
+  margin: 0;
+  font-size: 1.5rem;
+  color: rgb(116, 116, 116);
+}
+
+.desc-section p {
+  font-size: 1.14rem;
+  margin-bottom: 2rem;
+}
+
+.desc-section .Rocket-reserve-Btn {
+  width: 11rem;
+  height: 2.5rem;
+  color: white;
+  outline: none;
+  background-color: rgb(8, 130, 244);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* styling for Rocket Section  */
