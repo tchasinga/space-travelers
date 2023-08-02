@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-<img src="./src/asset/planet.png" width="30%">
+<img src="./src/asset/planet.png" width="120px">
   <br/>
 
   # Space Traveler's Hub
