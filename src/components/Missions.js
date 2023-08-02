@@ -37,7 +37,7 @@ const Missions = () => {
         {users.map((user) => (
           <MissionDetails
             key={user.id}
-            mission_name={user.mission_name}
+            missionName={user.mission_name}
             description={user.description}
             reserved={user.reserved}
           />
