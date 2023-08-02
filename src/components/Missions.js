@@ -9,9 +9,10 @@ const Missions = () => {
   const { loading, missions, error } = useSelector((state) => state.missions);
 
   useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
-
+    if (missions.length === 0) {
+      dispatch(fetchMissions());
+    }
+  }, [dispatch, missions.length]);
   if (loading) {
     return <h1>Loading</h1>;
   }
