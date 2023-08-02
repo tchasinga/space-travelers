@@ -5,7 +5,7 @@ import styles from '../styles/Mission.module.css';
 import { joinMission, leaveMission } from '../redux/Missions/missionSlice';
 
 const MissionDetails = ({
-  name, description, id, reserved,
+  missionName, description, id, reserved,
 }) => {
   const myStatus = {
     backgroundColor: reserved ? '#379cf6' : '#36454F',
@@ -20,7 +20,7 @@ const MissionDetails = ({
   };
 
   const dispatch = useDispatch();
-  const [text, setText] = useState('Not a Member');
+  const [text, setText] = useState(reserved ? 'Active Member' : 'Not a Member');
 
   const handleJoin = (e) => {
     e.preventDefault();
@@ -30,6 +30,7 @@ const MissionDetails = ({
       setText('Active Member');
     }
   };
+
   const handleLeave = (e) => {
     e.preventDefault();
     dispatch(leaveMission(id));
@@ -40,7 +41,7 @@ const MissionDetails = ({
 
   return (
     <tr style={styleRow}>
-      <td className={styles.name}>{name}</td>
+      <td className={styles.name}>{missionName}</td>
       <td className={styles.description}>{description}</td>
       <td>
         <span style={myStatus}>
@@ -68,14 +69,11 @@ const MissionDetails = ({
   );
 };
 
-MissionDetails.propTypes = PropTypes.shape({
-  name: PropTypes.string,
-  description: PropTypes.string,
-  id: PropTypes.string,
-  reserved: PropTypes.bool,
-}).isRequired;
-
-MissionDetails.defaultProps = {
-  reserved: false,
+MissionDetails.propTypes = {
+  missionName: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
+
 export default MissionDetails;

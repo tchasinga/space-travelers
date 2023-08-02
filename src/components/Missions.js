@@ -36,8 +36,8 @@ const Missions = () => {
       <tbody>
         {users.map((user) => (
           <MissionDetails
-            key={user.id} // Moved the 'key' prop inside MissionDetails
-            missionName={user.mission_name} // Pass props to MissionDetails component
+            key={user.id}
+            mission_name={user.mission_name}
             description={user.description}
             reserved={user.reserved}
           />
