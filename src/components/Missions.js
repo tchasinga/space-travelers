@@ -13,6 +13,7 @@ const Missions = () => {
       dispatch(fetchMissions());
     }
   }, [dispatch, missions.length]);
+
   if (loading) {
     return <h1>Loading</h1>;
   }
