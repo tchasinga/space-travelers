@@ -14,7 +14,14 @@ export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async (thun
   try {
     // Fetch API
     const response = await axios.get(rocketURL);
-    return response.data;
+    const selectRocket = response.data.map((item) => ({
+      id: item.id,
+      rocket_name: item.rocket_name,
+      description: item.description,
+      flickr_images: item.flickr_images,
+      reserved: false,
+    }));
+    return selectRocket;
   } catch (error) {
     return thunkAPI.rejectWithValue(`There was an error: ${error}`);
   }
@@ -23,7 +30,15 @@ export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async (thun
 const rocketSlice = createSlice({
   name: 'rockets',
   initialState,
-  reducers: {},
+  reducers: {
+    setReserve: (state, action) => {
+      const { id, reserved } = action.payload;
+      const rocket = state.rockets.find((rocket) => rocket.id === id);
+      if (rocket) {
+        rocket.reserved = reserved;
+      }
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchRockets.pending, (state) => {
@@ -41,4 +56,5 @@ const rocketSlice = createSlice({
   },
 });
 
+export const { setReserve } = rocketSlice.actions;
 export default rocketSlice.reducer;

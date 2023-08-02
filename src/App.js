@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <div className="wrapper">
         <Switch>
-          <Route exact path="/rockets" component={Rockets} />
+          <Route exact path="/" component={Rockets} />
           <Route exact path="/mission" component={Missions} />
           <Route exact path="/profile" component={Myprofile} />
         </Switch>

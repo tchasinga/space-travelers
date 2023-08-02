@@ -179,4 +179,32 @@ td {
   font-size: 1rem;
 }
 
+.reserved-span {
+  color: white;
+  background: rgb(16, 182, 160);
+  font-size: 12px;
+  padding: 2px 3px;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.cancel-reserve-btn {
+  width: 20%;
+  color: rgb(106, 78, 78);
+  padding: 5px;
+  border: 1px solid rgb(157, 152, 152);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reserve-rocket-btn {
+  width: 20%;
+  color: white;
+  background: rgb(34, 107, 191);
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+
 /* styling for Rocket Section  */
