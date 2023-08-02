@@ -4,7 +4,7 @@ import { fetchUsers } from '../redux/actiondataget';
 
 const Missions = () => {
   const dispatch = useDispatch();
-  const { loading, users, errors } = useSelector((state) => state);
+  const { loading, users, errors } = useSelector((state) => state.missions);
 
   useEffect(() => {
     dispatch(fetchUsers());
@@ -33,23 +33,17 @@ const Missions = () => {
         </tr>
       </thead>
       <tbody>
-        {users.length > 0 ? (
-          users.map((user) => (
-            <tr key={user.id}>
-              {' '}
-              <td>{user.mission_name}</td>
-              {' '}
-              <td>{user.description}</td>
-              {' '}
-              <td>{user.reserved}</td>
-              {' '}
-            </tr>
-          ))
-        ) : (
-          <tr>
-            <td colSpan="3">Loading</td>
+        {users.map((user) => (
+          <tr key={user.id}>
+            {' '}
+            <td>{user.mission_name}</td>
+            {' '}
+            <td>{user.description}</td>
+            {' '}
+            <td>{user.reserved}</td>
+            {' '}
           </tr>
-        )}
+        ))}
       </tbody>
     </table>
   );
