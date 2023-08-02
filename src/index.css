@@ -2,6 +2,7 @@
 
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
 }
 
 body {
@@ -86,15 +87,15 @@ h3 {
   border-collapse: collapse;
 }
 
-table,
-th,
-td {
-  border: 1px solid gray;
-  padding: 5px;
-}
-
 td {
   font-size: 12px;
+}
+
+.missionTable,
+.missionTable th,
+.missionTable td {
+  border: 1px solid gray;
+  padding: 5px;
 }
 
 .name {
@@ -208,3 +209,34 @@ td {
 }
 
 /* styling for Rocket Section  */
+
+
+/* styling for Profile Section  */
+.profile-table {
+  border: none;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-table th {
+  border: none;
+  font-size: 2.5rem;
+  padding-right: 7rem;
+  text-align: left;
+}
+
+.profile-table tr {
+  padding-bottom: 2rem;
+}
+
+.rocket-data-profile {
+  font-size: 1.2rem;
+  border: 1px solid rgb(179, 178, 178);
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 10px;
+}
+
+/* styling for Profile Section  */
