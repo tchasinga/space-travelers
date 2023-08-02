@@ -1,36 +1,32 @@
 import axios from 'axios';
 
-// action types
-export const FETCH_USERS_REQUEST = 'GET_MISSIONS';
-export const FETCH_USERS_SUCCESS = 'GET_MISSIONS_SUCCESS';
-export const FETCH_USERS_FAILURE = 'GET_MISSIONS_FAILURE';
+export const FETCH_MISSIONS_REQUEST = 'FETCH_MISSIONS_REQUEST';
+export const FETCH_MISSIONS_SUCCESS = 'FETCH_MISSIONS_SUCCESS';
+export const FETCH_MISSIONS_FAILURE = 'FETCH_MISSIONS_FAILURE';
 
-export const fetchUserRequest = (users) => ({
-  type: FETCH_USERS_REQUEST,
-  payload: users,
+export const fetchMissionsRequest = () => ({
+  type: FETCH_MISSIONS_REQUEST,
 });
 
-export const fetchUserSuccess = (users) => ({
-  type: FETCH_USERS_SUCCESS,
-  payload: users,
+export const fetchMissionsSuccess = (missions) => ({
+  type: FETCH_MISSIONS_SUCCESS,
+  payload: missions,
 });
 
-export const fetchUserFailure = (error) => ({
-  type: FETCH_USERS_FAILURE,
+export const fetchMissionsFailure = (error) => ({
+  type: FETCH_MISSIONS_FAILURE,
   payload: error,
 });
 
-// action of fetching data
-
-export const fetchUsers = () => (dispatch) => {
-  dispatch(fetchUserRequest());
+export const fetchMissions = () => (dispatch) => {
+  dispatch(fetchMissionsRequest());
   axios
     .get('https://api.spacexdata.com/v3/missions')
     .then((response) => {
-      const users = response.data;
-      dispatch(fetchUserSuccess(users));
+      const missions = response.data;
+      dispatch(fetchMissionsSuccess(missions));
     })
     .catch((error) => {
-      dispatch(fetchUserFailure(error.message));
+      dispatch(fetchMissionsFailure(error.message));
     });
 };

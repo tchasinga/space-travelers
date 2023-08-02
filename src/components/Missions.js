@@ -1,25 +1,26 @@
+// Missions.js
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchUsers } from '../redux/actiondataget';
+import { fetchMissions } from '../redux/Missions/missionSlice';
 import MissionDetails from './MissionDetails';
 
 const Missions = () => {
   const dispatch = useDispatch();
-  const { loading, users, errors } = useSelector((state) => state.missions);
+  const { loading, missions, error } = useSelector((state) => state.missions);
 
   useEffect(() => {
-    dispatch(fetchUsers());
+    dispatch(fetchMissions());
   }, [dispatch]);
 
   if (loading) {
     return <h1>Loading</h1>;
   }
 
-  if (errors) {
+  if (error) {
     return (
       <h1>
         Error:
-        {errors}
+        {error}
       </h1>
     );
   }
@@ -34,12 +35,13 @@ const Missions = () => {
         </tr>
       </thead>
       <tbody>
-        {users.map((user) => (
+        {missions.map((mission) => (
           <MissionDetails
-            key={user.id}
-            missionName={user.mission_name}
-            description={user.description}
-            reserved={user.reserved}
+            key={mission.mission_id}
+            missionName={mission.mission_name}
+            description={mission.description}
+            id={mission.mission_id}
+            reserved={mission.reserved}
           />
         ))}
       </tbody>
