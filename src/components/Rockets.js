@@ -9,8 +9,10 @@ const Rockets = () => {
   const error = useSelector((state) => state.rockets.error);
 
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+    if (rockets.length === 0) {
+      dispatch(fetchRockets());
+    }
+  }, [dispatch, rockets.length]);
 
   if (loading) {
     return <div>Loading...</div>;
