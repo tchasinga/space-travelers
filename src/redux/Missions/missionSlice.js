@@ -1,8 +1,10 @@
+// missionSlice.js
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
   missions: [],
+  loading: false,
 };
 
 export const fetchMissions = createAsyncThunk(
@@ -30,9 +32,17 @@ const missionsSlice = createSlice({
       });
     },
   },
-  extraReducers: (builders) => {
-    builders.addCase(fetchMissions.fulfilled, (state, action) => {
+  extraReducers: (builder) => {
+    builder.addCase(fetchMissions.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(fetchMissions.fulfilled, (state, action) => {
+      state.loading = false;
       state.missions = action.payload;
+    });
+    builder.addCase(fetchMissions.rejected, (state, action) => {
+      state.loading = false;
+      state.error = action.error.message;
     });
   },
 });

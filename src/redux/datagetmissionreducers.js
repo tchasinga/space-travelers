@@ -1,39 +1,40 @@
 import {
-  FETCH_USERS_REQUEST,
-  FETCH_USERS_SUCCESS,
-  FETCH_USERS_FAILURE,
+  FETCH_MISSIONS_REQUEST,
+  FETCH_MISSIONS_SUCCESS,
+  FETCH_MISSIONS_FAILURE,
 } from './actiondataget';
 
 const initialState = {
   loading: false,
-  users: [],
+  missions: [],
   error: '',
 };
 
-const reducer = (state = initialState, action) => {
+// new commit
+const missionReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_USERS_REQUEST:
+    case FETCH_MISSIONS_REQUEST:
       return {
         ...state,
         loading: true,
       };
-    case FETCH_USERS_SUCCESS:
+    case FETCH_MISSIONS_SUCCESS:
       return {
         ...state,
         loading: false,
-        users: action.payload,
+        missions: action.payload,
         error: '',
       };
-    case FETCH_USERS_FAILURE:
+    case FETCH_MISSIONS_FAILURE:
       return {
         ...state,
         loading: false,
         error: action.payload,
-        users: [],
+        missions: [],
       };
     default:
       return state;
   }
 };
 
-export default reducer;
+export default missionReducer;
