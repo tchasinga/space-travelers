@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers } from '../redux/actiondataget';
+import MissionDetails from './MissionDetails';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -34,15 +35,12 @@ const Missions = () => {
       </thead>
       <tbody>
         {users.map((user) => (
-          <tr key={user.id}>
-            {' '}
-            <td>{user.mission_name}</td>
-            {' '}
-            <td>{user.description}</td>
-            {' '}
-            <td>{user.reserved}</td>
-            {' '}
-          </tr>
+          <MissionDetails
+            key={user.id} // Moved the 'key' prop inside MissionDetails
+            missionName={user.mission_name} // Pass props to MissionDetails component
+            description={user.description}
+            reserved={user.reserved}
+          />
         ))}
       </tbody>
     </table>
