@@ -10,6 +10,7 @@ const initialState = {
   error: '',
 };
 
+// new commit
 const missionReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_MISSIONS_REQUEST:
