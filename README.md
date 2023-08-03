@@ -109,9 +109,9 @@ The project will open on your default browser. Interact with the project :)
 👤 **Author 1- **
 
 
-- GitHub: ()
-- Twitter: ()
-- LinkedIn: ()
+- GitHub: [@tchasinga](https://github.com/tchasinga)
+- Twitter: [@tchasingajacques](https://twitter.com/TchasingaJacque)
+- LinkedIn: [@tchasingajaques](https://www.linkedin.com/in/tchasinga-jacques-76aba7214/)
 
 👤 **Author 2- Binyam Tegene**
 
