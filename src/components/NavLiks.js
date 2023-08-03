@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import '../index.css';
 import NavStyles from '../styles/NavBar.module.css';
 
@@ -19,10 +19,10 @@ const NavLinks = () => {
   return (
     <div>
       <ul className="getNavDesigner">
-        <Link className={rocketLinkStyle} to="/">Rocket</Link>
-        <Link className={missionsLinkStyle} to="/mission">Mission</Link>
+        <NavLink className={rocketLinkStyle} to="/">Rocket</NavLink>
+        <NavLink className={missionsLinkStyle} to="/mission">Mission</NavLink>
         <span className="upbar"> | </span>
-        <Link className={myProfileLinkStyle} to="/profile">My-profile</Link>
+        <NavLink className={myProfileLinkStyle} to="/profile">My-profile</NavLink>
       </ul>
     </div>
   );

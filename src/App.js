@@ -1,22 +1,51 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Myprofile from './components/MyProfile';
-import Missions from './components/Missions';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout';
 import Rockets from './components/Rockets';
+import Missions from './components/Missions';
+import Myprofile from './components/MyProfile';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <div className="wrapper">
-        <Switch>
-          <Route exact path="/" component={Rockets} />
-          <Route exact path="/mission" component={Missions} />
-          <Route exact path="/profile" component={Myprofile} />
-        </Switch>
-      </div>
-    </Router>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={(
+              <Layout>
+                {' '}
+                <Rockets />
+                {' '}
+              </Layout>
+)}
+          />
+          <Route
+            path="/mission"
+            element={(
+              <Layout>
+                {' '}
+                <Missions />
+                {' '}
+              </Layout>
+)}
+          />
+          <Route
+            path="/profile"
+            element={(
+              <Layout>
+                {' '}
+                <Myprofile />
+                {' '}
+              </Layout>
+)}
+          />
+          {/* <Route path="/rockets" element={<Rockets />} /> */}
+          {/* <Route path="/missions" element={<Missions />} /> */}
+          {/* <Route path="/myprofile" element={<Myprofile />} /> */}
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
