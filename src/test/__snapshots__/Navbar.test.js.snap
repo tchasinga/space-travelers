@@ -26,7 +26,8 @@ Object {
               class="getNavDesigner"
             >
               <a
-                class="linksStyles   active"
+                aria-current="page"
+                class="linksStyles   active active"
                 href="/"
               >
                 Rocket
@@ -76,7 +77,8 @@ Object {
             class="getNavDesigner"
           >
             <a
-              class="linksStyles   active"
+              aria-current="page"
+              class="linksStyles   active active"
               href="/"
             >
               Rocket
