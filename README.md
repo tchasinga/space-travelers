@@ -106,14 +106,14 @@ The project will open on your default browser. Interact with the project :)
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author 1- **
+👤 **Tchasinga jacques**
 
 
 - GitHub: [@tchasinga](https://github.com/tchasinga)
 - Twitter: [@tchasingajacques](https://twitter.com/TchasingaJacque)
 - LinkedIn: [@tchasingajaques](https://www.linkedin.com/in/tchasinga-jacques-76aba7214/)
 
-👤 **Author 2- Binyam Tegene**
+👤 **Binyam Tegene**
 
 > - GitHub: [@githubhandle](https://github.com/Log-benjamin?tab=repositories)
 > - Twitter: [@twitterhandle](https://twitter.com/@binyam_tegene)
