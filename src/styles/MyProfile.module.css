@@ -1,0 +1,18 @@
+.missionsRockets {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.missions,
+.rockets {
+  float: left;
+  width: 35%;
+  margin-left: 2rem;
+}
+
+.missions ul,
+.rockets ul {
+  list-style-type: none;
+  padding: 0;
+}

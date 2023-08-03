@@ -1,0 +1,210 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2% 0 2%;
+  padding: 0.5% 1% 1% 1%;
+  border-bottom: 3px solid lightgray;
+}
+
+.logHeader {
+  display: flex;
+}
+
+.space-logo {
+  width: 10%;
+}
+
+.nav-section h1 {
+  font-size: 30px;
+  margin-left: 2%;
+}
+
+.rockMisPro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.rockMisPro li {
+  margin-right: 2rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: black;
+}
+
+h3 {
+  text-align: center;
+}
+
+.rockMisPro li.active {
+  padding: 10px;
+  background-color: #b38e1f;
+  color: white;
+  text-decoration: underline;
+}
+
+.getNavDesigner {
+  display: flex;
+  color: red;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.upbar {
+  color: black;
+  font-size: 1rem;
+}
+
+/* design table */
+
+/* CSS for Missions component */
+.missionContainer {
+  padding: 0 40px;
+}
+
+.missionTable {
+  border: 2px solid gray;
+  margin: 30px;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid gray;
+  padding: 5px;
+}
+
+td {
+  font-size: 12px;
+}
+
+.name {
+  text-align: left;
+  vertical-align: top;
+  padding: 5px;
+}
+
+.joinBtn {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 2px solid rgb(24, 20, 20);
+  width: 120px;
+  padding: 5px;
+}
+
+.leaveBtn {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid rgb(197, 34, 34);
+  color: red;
+  width: 120px;
+  padding: 5px;
+}
+
+.profileTable {
+  border-collapse: collapse;
+  width: 400px;
+  padding: 5px;
+  margin: 20px;
+}
+
+.profileTable th {
+  font-size: 25px;
+}
+
+.profileRow {
+  display: block;
+  padding: 25px;
+  border: 0.1px solid rgb(207, 191, 191);
+  font-size: 16px;
+}
+
+/* styling for Rocket Section  */
+.rocket-parent {
+  margin: 2rem 5% 2rem 5%;
+}
+
+.rocket-card {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.rocketImg {
+  width: 20%;
+  height: auto;
+  margin-right: 2%;
+}
+
+.desc-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.desc-section h3 {
+  text-align: left;
+  margin: 0;
+  font-size: 1.5rem;
+  color: rgb(116, 116, 116);
+}
+
+.desc-section p {
+  font-size: 1.14rem;
+  margin-bottom: 2rem;
+}
+
+.desc-section .Rocket-reserve-Btn {
+  width: 11rem;
+  height: 2.5rem;
+  color: white;
+  outline: none;
+  background-color: rgb(8, 130, 244);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.reserved-span {
+  color: white;
+  background: rgb(16, 182, 160);
+  font-size: 12px;
+  padding: 2px 3px;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.cancel-reserve-btn {
+  width: 15%;
+  color: rgb(53, 46, 46);
+  padding: 10px;
+  border: 1px solid rgb(157, 152, 152);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reserve-rocket-btn {
+  width: 15%;
+  color: white;
+  background: rgb(34, 107, 191);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+
+/* styling for Rocket Section  */
